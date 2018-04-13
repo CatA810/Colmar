@@ -1,219 +1,421 @@
-/* Universal Styles */
+/* All Universal Styles */
 
 html {
-  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  color: #000d11;
 }
 
-body {
-  font-family: "Helvetica", sans-serif;
-  line-height: 1.4;
+main {
+  font-family: "Montserrat", sans-serif;
+  position:relative;
+  top: 4rem;
+  color: #001923;
 }
 
-.container {
-  max-width: 960px;
-  margin: 0 auto;
+section:nth-child(2n+1) {
+  background-color: #FCF4D9;
 }
 
+section {
+  width: auto 0;
+}
 
-/* Banner */
+a {
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  padding-left: 1rem;
+  color: #01161E;
+  font-size: 1.25rem;
+}
+
+h1 {
+  font-family: "Lato", sans-serif;
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: 1.1;
+}
+
+h2 {
+  font-family: "Lato", sans-serif;
+  font-size: 2.4rem;
+  font-weight: bold;
+  padding: 2rem 0;
+}
+
+h3 {
+  font-family: "Lato", sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.2;
+  font-weight: bold;
+}
+
+h5, footer span {
+  font-size: 0.8rem;
+  color: #8A97A8;
+}
+
+p {
+  line-height: 1.35;
+  padding: 0.5rem 0.5rem 0.5rem 0;
+}
+
+i {
+  line-height: 1.35;
+  padding: 0.5rem 0.5rem 0.5rem 0;
+  color: #FF7A5A;
+  font-style: italic;
+}
+
+/* Website Header */
 
 header {
-  background-image: url('https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-5/tortoiseshell-optics/resources/images/glasses-bg.png');
-  background-position: center;
-  height:30rem;
-  background-size: cover;
-  background-repeat: no-repeat;
-  padding-top: 1rem;
-}
-
-header nav.container {
-  background-color: cadetblue;
+  background-color: white;
+  height: 4rem;
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 10;
 }
 
 header img {
-  height: 1.5rem;
-  padding-right: 1rem;
-  padding-left: 2rem;
+  height: 3rem;
+  padding: 0 2% 0 1.5rem;
 }
 
-nav {
+.header-logo {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
-.menu {
-  padding: 1rem 2rem;
+.logo-text {
+  color: #8A97A8;
 }
 
-nav div {
-    display: flex;
-    align-items: center;
-    color: white;
-    font-size: 1rem;
-}
-
-li {
-  display: inline;
-  padding-left: 2rem;
-}
-
-.main-banner {
-  padding: 1.5rem 5rem;
-  margin-right: -2rem;
+.logo-text span {
+  padding: 0;
   font-weight: bold;
-  font-size: 2rem;
-  line-height: 1.2rem;
-  background-color: white;
-  display: block;
-  margin-top: 10rem;
+  color: #01161E;
 }
 
-header .flex {
-  justify-content: flex-end;
-}
+/* Nav Section */
 
-.flex {
+nav {
+  padding-right: 3%;
+  align-self: center;
   display: flex;
 }
 
-
-h1 {
-  position:relative;
+.desktop {
+  display: inline-block;
 }
 
-.menu-phone {
+.mobile {
   display: none;
 }
 
-/* Media Quiries */
+/* Main Banner */
 
-@media only screen and (max-width: 1024px) {
-  header {
-    height: 22rem;
-    padding-top: 0;
-  }
-
-  nav.container {
-    max-width: 100%;
-  }
-
-  .main-banner {
-    padding: 0.75rem 4rem;
-    margin-top: 5rem;
-    margin-right: 2rem;
-  }
-
-  .main-banner h1 {
-    font-size: 1.33rem;
-  }
+.side-text {
+  display: inline-flex;
+  flex-flow: column;
+  justify-content: space-between;
+  vertical-align: middle;
 }
 
-
-@media only screen and (max-width: 700px) {
-  header div span {
-    display: none;
-  }
-
-  header {
-    background-position: 20%;
-    height: 17rem;
-  }
-
-  .main-banner {
-    width: 100%;
-    padding: 0 1rem;
-    margin: 9rem auto 0 auto;
-    text-align: center;
-  }
-
-  .main-banner h1 {
-    font-size: 1rem;
-  }
+.banner-box img {
+  display: inline-block;
+  vertical-align: middle;
+  width: 60%;
+  margin: 2rem 2.5rem 2rem 1.5rem;
+  flex-shrink: 0;
 }
 
-/* 3 x Icons */
+.banner-box h3 {
+    margin: 1.5rem 0;
+}
 
+.banner-box .side-text {
+    width: 30%;
+    box-sizing: border-box;
+}
 
-.icons{
+.banner-box p, .main-pic-box p {
+    margin-bottom: 1.5rem;
+}
+
+/* Start Here Button */
+
+.start {
+  width: 75%;
+  background-color: #FF7A5A;
+  color: #01161E;
+  font-size: 1.2rem;
+  padding: 1rem 0;
+  text-align: center;
+  transition: background-color 100ms linear 100ms;
+  font-weight: bold;
+}
+
+.start:hover {
+  background-color: #9BD7D5;
+  color: #01161E;
+}
+
+.information .content-box:last-child, .thesis .content-box:first-child {
+  background-color: #FCF4D9;
+}
+
+/* Section 2 */
+
+.multi-container {
+  width: 100%;
   display: flex;
- flex-direction: column;
- text-align: center;
- width: 5rem;
- margin: 3rem;
- height: 8rem;
- justify-content: space-between;
-align-items: center;
-
+  flex-wrap: nowrap;
 }
 
-.icons img {
-  width: 5rem;
+.main-pic-box {
+  width: 60%;
+  padding: 2rem 1.5rem;
 }
 
-.icons .first {
-  width: 3.5rem;
+.main-pic-box img, video {
+  width: 100%;
+  margin-bottom: 2rem;
 }
 
-.icon-text{
+.main-pic-box h2 {
+  padding: 0 0 1.5rem 0;
 }
 
-.supporting {
+#phone-img {
+  display: none;
+}
+/* Small Containers */
+
+.stacked-boxes {
+  display: flex;
+  flex-flow: column;
+  vertical-align: top;
+  margin-top: 1rem;
+  width: 35%;
+}
+
+.content-box img {
+  width: 35%;
+  margin: 3.5%;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.content-box .side-text {
+  width: 56%;
+}
+
+.content-box a {
+  color: #FF7A5A;
+  padding: 0;
+  transition: color 100ms linear 100ms;
+}
+
+.content-box a:hover {
+  color: #9BD7D5;
+}
+
+
+.thesis .main-pic-box {
+  padding: 1rem 1rem 1.5rem 1.5rem;
+}
+
+
+/* Learning Section */
+
+.courses {
   display: flex;
   justify-content: center;
+  flex-flow: column;
+  align-items: center;
 }
 
-@media only screen and (max-width: 560px) {
-  .supporting {
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    margin-top: 3rem;
-  }
+.course-container {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
 }
 
-/* Philosophy & Appointments */
-
-
-.box-head {
-  background-color: cadetblue;
-  padding: 0.5rem 1.25rem;
-  margin-bottom: 1rem;
-  font-weight: bold;
-  max-width: 10rem;
-  color: white;
+.course-box {
+  width: 30%;
+  height: auto;
+  margin: 0 0.5rem 1rem 0.5rem;
+  background-color: #efefea;
 }
 
-.boxes {
-  width: 35%;
-  margin-right: 5%;
-  margin-bottom: 4rem;
+.courses h2, .thesis h2 {
+  text-align: center;
 }
 
-.boxes p {
-  padding: 1rem 0;
+.course-box img {
+  width:100%;
 }
 
-@media only screen and (max-width: 560px) {
-  .service {
-    height: auto;
-    margin: .77rem;
-    font-size: .77rem;
-  }
+.course-text {
+  padding: 1rem 0 0 1rem;
+  margin: 1.5rem auto;
 }
 
+.course-text h3 {
+  padding-bottom: 0.5rem;
+}
 
-/* Footer */
+/* Website footer */
 
 footer {
-  background-color: azure;
-  padding: 4rem 2rem;
-  align-items: center;
+  background-color: #222222;
+  border-top: 2px solid #1a1a1a;
   display: flex;
+  justify-content: space-between;
+  position:relative;
+  top: 4rem;
+  width: 100%
+  color: #f1f2f4;
 }
 
-footer img{
-  height: 1.5rem;
-  margin-left: 2rem;
- margin-right: 1rem;
+footer h5 {
+  font-family: "Lato", sans-serif;
+  display: inline-block;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+footer nav {
+  align-self: auto;
+  padding-top: 1rem;
+}
+
+footer span {
+  padding-left: 1rem;
+}
+
+
+
+/* ALL Mobile Settings */
+
+@media only screen and (max-width:470px) {
+
+/* Do Not Display */
+
+footer nav, .desktop, .logo, .information .main-pic-box,
+.thesis .stacked-boxes, .thesis p, .thesis h3, .course-box img,
+.course-box p, #desktop-img {
+  display: none;
+}
+
+/* Mobile Header */
+
+.mobile {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.mobile img {
+  width: auto;
+  height: 90%;
+}
+
+/* Mobile Main Banner */
+
+.start {
+  width: 100%;
+  align-self: center;
+}
+
+.banner-box img {
+  width: 90%;
+  padding: 2rem 1rem;
+  margin: auto;
+}
+
+.banner-box .side-text {
+  width: 100%;
+  padding: 0 1rem;
+  margin: auto;
+}
+
+/* Mobile Section 2 */
+
+.stacked-boxes, .content-box .side-text{
+  width: 100%;
+  background-color: white;
+}
+
+.content-box {
+  display: flex;
+  flex-flow: column;
+}
+
+#phone-img {
+  display: block;
+  box-sizing: border-box;
+  padding: 1rem 1rem 1.5rem 1rem;
+}
+
+.content-box img {
+  width: 100%;
+  margin: auto;
+  background-color: white;
+}
+
+.content-box .side-text {
+  box-sizing: border-box;
+  padding: 1rem;
+}
+
+.content-box a {
+  font-size: 1rem;
+}
+
+/* Mobile Learning Section */
+
+.courses {
+  border-top: 1px solid #8A97A8;
+  border-bottom: 1px solid #8A97A8;
+}
+
+.course-container {
+  flex-flow: column;
+}
+
+.course-box {
+  width: 100%;
+  height: auto;
+  padding: 0;
+  margin: 0 0 0.5rem 0;
+}
+
+.course-text {
+  padding: 1rem;
+}
+
+/* Mobile Thesis Section */
+
+.thesis .main-pic-box {
+  width: 100%;
+  padding: 0 0 2rem 0;
+}
+
+video {
+  margin:auto;
+}
+
+/* Mobile Footer Section */
+
+h5 {
+  margin: 1.5rem 0 0 0;
+}
+
 }
